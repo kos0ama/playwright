@@ -16,6 +16,7 @@
 	await page.close();
 
 	// ---------------------
+	//This is a branch source.
 	await context.close();
 	await browser.close();
 })();
