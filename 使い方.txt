@@ -7,6 +7,122 @@ npx playwright codegen https://cloudapi.zendesk.com/hc/ja/articles/206365461
 yarn init -y
 yarn add ts-node playwright typescript json2csv
 
+
+git status
+git diff
+git add .
+git status
+git commit -m "コメント"
+git push origin master
+
+
+--------------------------------
+Gitを使う宣言
+git init
+
+Gitで管理したくないものはここに記述。
+vi .gitignore
+
+ユーザー名・メールアドレスの設定
+git config user.email メールアドレス
+git config user.name ユーザ名
+
+config 設定の確認
+git config --list
+git config 確認したい設定
+
+config 設定の削除
+git config --unset 削除したい設定
+--------------------------------
+
+事前確認 (ちなみに、ここで git checkout -- ファイル名 とすると変更前に戻すことが出来る。)
+git status
+
+差分を確認（ステージングエリアに上げる前） add後(ステージングエリアに上げた後)は git diff --cached で確認出来る。
+git diff
+
+管理対象に追加 git add . 今のディレクトリより下のものを全て管理対象に追加。
+git add 管理対象にしたいもの 
+
+ファイルの状態を確認
+git status
+
+差分を確認
+git diff --cached
+
+コメント付きでコミット
+git commit -m "first comment"
+
+コミット後の確認
+git log
+git log --oneline 1コミットにつき1行だけのコンパクト表示で見れる。
+git log -p xxxxxx どこが変更されているか詳細が見れる。
+git log --stat どのファイルがどれくらい変更されてるかざっと見れる。
+
+origin 登録
+git remote add origin https://github.com/xxx/xxx.git
+
+共有リポジトリに反映
+git push -u origin master
+
+-------------------------
+
+# ブランチ作成
+git branch ブランチ名
+
+# ブランチ確認 （頭に * のついているのが現在のブランチ）
+git branch
+
+# ブランチ切り替え（移動）
+git checkout ブランチ名
+
+# masterを更新したい時 変更（ブランチ先にコミットしたりする）
+git status
+git diff
+git add .
+git status
+git commit -m "コメント"
+
+# リモートにPush
+git push origin ブランチ名
+
+
+##### 区切りが良くなって、マージしたくなった時 #####
+
+# マージ先(master)に移動
+git checkout master
+
+# さっき作成したブランチをマージ先にマージ
+git merge ブランチ名
+
+# ログ確認（さっきのブランチの変更内容がマージ先に反映されているか確認）
+git log
+
+# Pushする
+git push origin master
+
+# マージ後に削除
+git branch -d ブランチ名
+git push origin :ブランチ名
+
+共有リポジトリをローカルに持ってきたい時
+git clone https://github.com/ユーザ名/xxx.git ローカルディレクトリ
+
+ローカルリポジトリのmasterブランチにリモートリポジトリoriginのmasterブランチを取り込む。
+git checkout master
+git pull origin master
+
+
+
+
+
+
+
+
+
+
+
+
 package.json
 -----
   "scripts": {
