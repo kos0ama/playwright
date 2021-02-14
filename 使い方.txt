@@ -1,0 +1,32 @@
+﻿npm init -y
+npm i -D playwright
+
+npx playwright codegen https://cloudapi.zendesk.com/hc/ja/articles/206365461
+
+
+yarn init -y
+yarn add ts-node playwright typescript json2csv
+
+package.json
+-----
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+
+
+
+  index.ts
+  ----
+
+  https://zenn.dev/ryo_kawamata/articles/go-to-eat-to-appsheet
+
+発信番号と違う電話番号が通知された
+  /html/body/main/div[1]/section[1]/ul/li[4]/a
+  body > main > div.section-tree > section:nth-child(1) > ul > li:nth-child(4) > a
+ログの保存期間について
+  /html/body/main/div[1]/section[1]/ul/li[5]/a
+  body > main > div.section-tree > section:nth-child(1) > ul > li:nth-child(5) > a
+Twilioでクレジットカードが使用できない・限度額に達してないのに決済に失敗する
+  /html/body/main/div[1]/section[3]/ul/li[2]/a
+  body > main > div.section-tree > section:nth-child(3) > ul > li:nth-child(2) > a
+

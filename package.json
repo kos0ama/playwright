@@ -1,0 +1,22 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "playwright-cli": "^0.180.0"
+  },
+  "dependencies": {
+    "json2csv": "^5.0.6",
+    "playwright": "^1.8.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
+  }
+}
